@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    android:orientation="vertical" >
+
+    <com.hificamera.thecamhi.base.TitleView
+        android:id="@+id/top_setup_and_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.hificamera.thecamhi.base.TitleView>
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="The code has been successfully coded to the sensor :"
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp" >
+
+        <TextView
+            android:id="@+id/tv_rf_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RF code"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_rf_code_con"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="74745"
+            android:textColor="#777777"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_rf_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rf_code"
+            android:layout_marginTop="20dp"
+            android:text="Equipment type"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_rf_type_con"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_rf_type"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:textColor="#777777"
+            android:text="nihao"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="Set up the sensor"
+        android:textColor="#666666"
+        android:textSize="14sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:paddingBottom="15dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp" >
+
+        <TextView
+            android:id="@+id/tv_rf_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="first name"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/tv_rf_name_con"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:gravity="right"
+            android:hint="Give the sensor a name"
+            android:singleLine="true"
+            android:textColorHint="#bbbbbb"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_rf_type1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rf_name"
+            android:layout_marginTop="35dp"
+            android:text="Start state"
+            android:textSize="16sp" />
+
+        <com.hificamera.hichip.widget.SwitchButton
+            android:id="@+id/swibut_enable"
+            style="@style/SwitchButtonStyle"
+            android:layout_alignBottom="@+id/tv_rf_type1"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:checked="true" />
+
+        <TextView
+            android:id="@+id/tv_rf_alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rf_type1"
+            android:layout_marginTop="35dp"
+            android:text="Warning linkage"
+            android:textSize="16sp" />
+
+        <com.hificamera.hichip.widget.SwitchButton
+            android:id="@+id/swibut_alarm"
+            style="@style/SwitchButtonStyle"
+            android:layout_alignBottom="@+id/tv_rf_alarm"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/tv_rf_pz_preset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_rf_alarm"
+            android:layout_marginTop="35dp"
+            android:text="PTZ preset position"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_preset_con"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_rf_pz_preset"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:background="@null"
+            android:clickable="true"
+            android:gravity="right"
+            android:hint="1-8"
+            android:inputType="number"
+            android:maxLength="1"
+            android:text="0"
+            android:textColorHint="#bbbbbb"
+            android:textCursorDrawable="@null" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="#ffffff"
+        android:text="confirm"
+        android:textColor="#39076A" />
+
+</LinearLayout>

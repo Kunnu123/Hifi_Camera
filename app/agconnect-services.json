@@ -1,0 +1,11 @@
+{
+	"client":{
+		"cp_id":"890086000102129799",
+		"product_id":"9105163812218575404",
+		"client_id":"193845969270342784",
+		"client_secret":"38A9B01836CB66D6E28255ACC548E53CD5A119545E31C80C7962A1E4D23B47C5",
+		"app_id":"100303331",
+		"package_name":"com.hificamera"
+	},
+	"configuration_version":"1.0"
+}

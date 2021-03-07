@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/edit_box_bg"
+    android:orientation="vertical" >
+
+    <com.hificamera.thecamhi.base.TitleView
+        android:id="@+id/rf_code_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </com.hificamera.thecamhi.base.TitleView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="3dp"
+        android:text="*Please move the sensor close to the camera, and then click the &apos;Start pairing&apos; below to trigger the sensor at the same time"
+        android:textColor="#39076A"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp" >
+
+        <ImageView
+            android:id="@+id/iv_radar_11"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:src="@drawable/radar_11" />
+        <ImageView
+            android:id="@+id/iv_radar_22"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:src="@drawable/radar_22" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_check_code"
+        android:layout_width="120dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/selector_check_code"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Start pairing"
+        android:textColor="@drawable/selector_check_code_tv" />
+
+</LinearLayout>

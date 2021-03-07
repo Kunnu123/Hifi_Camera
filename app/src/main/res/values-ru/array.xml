@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="tips_alarm_list_array">
+        <item>Детек. движ.</item>
+        <item>Интеллект. трев</item>
+        <item>Аудио трев.</item>
+        <item>UART трев.</item>
+        <item>Добро пожаловать</item>
+    </string-array>
+
+
+    <string-array name="device_timezone_new">
+        <item>Etc/GMT-12</item>
+        <item>Тихий океан/Апиа</item>
+        <item>Тихий океан/Гонолулу</item>
+        <item>Америка/Анкоридж</item>
+        <item>Америка/Лос_Анжелес</item>
+        <item>Америка/Дэнвер</item>
+        <item>Америка/Тегусигальпа</item>
+        <item>Америка/Феникс</item>
+        <item>Америка/Саскачеван</item>
+        <item>Америка/Мексика</item>
+        <item>Америка/Чикаго</item>
+        <item>Америка/Коста_Рика</item>
+        <item>Америка/Инианаполис</item>
+        <item>Америка/Нью_Йорк</item>
+        <item>Америка/Богота</item>
+        <item>Америка/Каракас</item>
+        <item>Америка/Сантьяго</item>
+        <item>Америка/Монтреаль</item>
+        <item>Америка/Св_Джонс</item>
+        <item>Америка/Тхуле</item>
+        <item>Америка/Буенос_Айрес</item>
+        <item>Америка/Сан_Пауло</item>
+        <item>Атлантика/Южная_Джорджия</item>
+        <item>Атлантика/Капе_Верде</item>
+        <item>Атлантика/Азорские_острова</item>
+        <item>Европа/Дублин</item>
+        <item>Африка/Касабланка</item>
+        <item>Европа/Амстердам</item>
+        <item>Европа/Белград</item>
+        <item>Европа/Брюссель</item>
+        <item>Европа/Варшава</item>
+        <item>Африка/Лагос</item>
+        <item>Европа/Атенс</item>
+        <item>Европа/Бухарест</item>
+        <item>Африка/Каир</item>
+        <item>Африка/Хараре</item>
+        <item>Европа/Хельсинки</item>
+        <item>Азия/Иерусалим</item>
+        <item>Азия/Багдад</item>
+        <item>Азия/Кювейт</item>
+        <item>Европа/Москва</item>
+        <item>Африка/Найроби</item>
+        <item>Азия/Тегеран</item>
+        <item>Азия/Дубай</item>
+        <item>Азия/Баку</item>
+        <item>Азия/Кабул</item>
+        <item>Азия/Екатеринбург</item>
+        <item>Азия/Карачи</item>
+        <item>Азия/Калькута</item>
+        <item>Азия/Катманду</item>
+        <item>Азия/Новосибирск</item>
+        <item>Азия/Дхака</item>
+        <item>Азия/Нурсултан</item>
+        <item>Азия/Рангон</item>
+        <item>Азия/Банкок</item>
+        <item>Азия/Красноярск</item>
+        <item>Азия/Гонконг</item>
+        <item>Азия/Иркутск</item>
+        <item>Азия/Куала_Лампур</item>
+        <item>Австралия/Перт</item>
+        <item>Азия/Тайпей</item>
+        <item>Азия/Токио</item>
+        <item>Азия/Сеул</item>
+        <item>Азия/Якутск</item>
+        <item>Австралия/Аделаида</item>
+        <item>Австралия/Брисбан</item>
+        <item>Австралия/Сидней</item>
+        <item>Тихий океан/Гуам</item>
+        <item>Австралия/Хобарт</item>
+        <item>Азия/Владивосток</item>
+        <item>Азия/Магадан</item>
+        <item>Тихий океан/Оукленд</item>
+        <item>Тихий океан/Фиджи</item>
+        <item>Тихий океан/Тонгатапу</item>
+
+    </string-array>
+
+    <!--—以前添加 -->
+    <string-array name="tab_name">
+        <item>Камера</item>
+        <item>Изображение</item>
+        <item>Видео</item>
+        <item>Справка</item>
+    </string-array>
+    <string-array name="connect_state">
+        <item>Отключение</item>
+        <item>Соединение</item>
+        <item>Соединение</item>
+        <item>Неправильный пароль</item>
+        <item>Онлайн</item>
+        <item>Пожалуйста, обновите приложение</item>
+    </string-array>
+    <string-array name="motion_detection_sensitivity">
+        <item>Высокий</item>
+        <item>Средний</item>
+        <item>Низкий</item>
+    </string-array>
+    <string-array name="audio_input_style">
+        <item>Линейный</item>
+        <item>Микр.</item>
+    </string-array>
+    <string-array name="device_timezone_old">
+        <item>GMT-11 Мидуэй;Самоа</item>
+        <item>GMT-10 Гавайи;</item>
+        <item>GMT-9 Аляска;</item>
+        <item>GMT-8 Тихий океан(США или Канада);</item>
+        <item>GMT-7 Горное время(США или Канада);</item>
+        <item>GMT-6 Центральное время(США или Канада);</item>
+        <item>GMT-5 Восточное время(США или Канада);</item>
+        <item>GMT-4 Атлантическое время(Канада);</item>
+        <item>GMT-3 Бразилия;Буенос Айрес;</item>
+        <item>GMT-2 Средне-Атлантическое;</item>
+        <item>GMT-1 Азорские острова;Капе Верде;</item>
+        <item>GMT 0 Лондон;Исландия;Лиссабон;</item>
+        <item>GMT+1 Париж;Рим;Берлин;Мадрид;</item>
+        <item>GMT+2 Израиль;Афины;Каир;Иерусалим;</item>
+        <item>GMT+3 Москва;Найроби;Рияд;</item>
+        <item>GMT+4 Баку;Тбилиси;Абу Даби;Маскот;</item>
+        <item>GMT+5 Нью Дели;Исламбад;Карачи;</item>
+        <item>GMT+6 Дакар;Алма-Ата;Новосибирск;Нурсултан;</item>
+        <item>GMT+7 Банког;Хануи;Джакарта;</item>
+        <item>GMT+8 Пекин;Сингапур;Гонконг;Тайбэй;</item>
+        <item>GMT+9 Токио;Сеул;Якутск;</item>
+        <item>GMT+10 Гуам;Мельбурн;Сиднэй;</item>
+        <item>GMT+11 Магадан;Новая Каледония;Соломоновы острова;</item>
+        <item>GMT+12 Велингтон;Оукленд;Фиджи</item>
+    </string-array>
+
+
+    <string-array name="net_work_style">
+        <item>КАБЕЛЬ</item>
+        <item>WIFI</item>
+        <item>4G</item>
+        <item>5G</item>
+    </string-array>
+    <string-array name="video_frequency">
+        <item>50Гц</item>
+        <item>60Гц</item>
+    </string-array>
+    <string-array name="video_apenc">
+        <item>НЕДЕЙСТВИТЕЛЬНЫЙ</item>
+        <item>НЕТ</item>
+        <item>WEP</item>
+        <item>WPA_TKIP</item>
+        <item>WPA_AES</item>
+        <item>WPA2_TKIP</item>
+        <item>WPA2_AES</item>
+    </string-array>
+    <string-array name="recording_time">
+        <item>НЕТ</item>
+        <item>Все дни</item>
+    </string-array>
+    <string-array name="safety_connection">
+        <item>Нет</item>
+        <item>SSL</item>
+        <item>TLS</item>
+        <item>STARTTLS</item>
+    </string-array>
+    <string-array name="online_recording_type">
+        <item>Все записи</item>
+        <item>Ручная запись</item>
+        <item>Запись тревоги</item>
+        <item>План записи</item>
+    </string-array>
+    <string-array name="event_type">
+        <item>Все видео</item>
+        <item>Ручное видео</item>
+        <item>Видео тревоги</item>
+        <item>План видео</item>
+    </string-array>
+    <string-array name="alarm_action_picture_num">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "834198022413",
+    "firebase_url": "https://comhichip.firebaseio.com",
+    "project_id": "comhichip",
+    "storage_bucket": "comhichip.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:834198022413:android:b10317e048528d05a9a844",
+        "android_client_info": {
+          "package_name": "com.hificamera"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "834198022413-o49lgd2g57j6vppn1hpbluerhgm56kcr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLtnukvVIcnkBe2cDmspp6ncsOfZR455k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "834198022413-o49lgd2g57j6vppn1hpbluerhgm56kcr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
