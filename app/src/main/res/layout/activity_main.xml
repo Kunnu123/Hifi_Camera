@@ -29,6 +29,7 @@
         android:layout_height="fill_parent"
         android:src="@drawable/splash"
         android:visibility="gone" 
-        android:scaleType="centerCrop"/>
+        android:scaleType="centerCrop"
+        android:contentDescription="TODO" />
 
 </RelativeLayout>

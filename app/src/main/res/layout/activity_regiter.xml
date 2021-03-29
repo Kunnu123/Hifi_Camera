@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:id="@+id/mainLayout"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/px_10"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/px_10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Customer ID"
+                android:textColor="@color/black"
+                android:textSize="@dimen/px_16"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_cust_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edt_bg"
+                android:longClickable="false"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="User Name"
+                android:textColor="@color/black"
+                android:textSize="@dimen/px_16"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edt_bg"
+                android:longClickable="false"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Email ID"
+                android:textColor="@color/black"
+                android:textSize="@dimen/px_16"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edt_bg"
+                android:inputType="textEmailAddress"
+                android:longClickable="false"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Camera ID"
+                android:textColor="@color/black"
+                android:textSize="@dimen/px_16"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_camera_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edt_bg"
+                android:longClickable="false"
+                android:padding="10dp"
+                android:digits="@string/uid_limit_input"
+                android:singleLine="true"
+                android:textColor="@android:color/black" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Camera DOP"
+                android:textColor="@color/black"
+                android:textSize="@dimen/px_16"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/llDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:clickable="true"
+                android:background="@drawable/edt_bg"
+                android:orientation="horizontal"
+                android:focusable="true">
+
+                <EditText
+                    android:editable="false"
+                    android:id="@+id/edt_camera_dop"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@android:color/black" />
+
+                <android.support.v7.widget.AppCompatImageView
+                    android:src="@drawable/ic_date_range_expense_24dp"
+                    android:tint="@color/color_rf_blue"
+                    android:layout_width="40dp"
+                    android:padding="5dp"
+                    android:clickable="false"
+                    android:layout_gravity="center"
+                    android:layout_height="40dp"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Phone Number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/px_16"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edt_bg"
+                android:inputType="number"
+                android:longClickable="false"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Address"
+                android:textColor="@color/black"
+                android:textSize="@dimen/px_16"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edt_bg"
+                android:longClickable="false"
+                android:minLines="3"
+                android:padding="10dp"
+                android:gravity="top"
+                android:layout_gravity="top"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/password"
+                android:textColor="@color/black"
+                android:textSize="@dimen/px_16"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edt_bg"
+                android:inputType="textPassword"
+                android:longClickable="false"
+                android:padding="10dp"
+                android:singleLine="true"
+                android:textColor="@android:color/black" />
+
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape_color"
+                android:gravity="center"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/txtLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:longClickable="false"
+                android:padding="10dp"
+                android:text="Already member!! Login now."
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -538,7 +538,15 @@
     <string name="tips_setzonefail">Set time zone failed</string>
     <string name="tips_port_notnull">The port can not be empty or 0</string>
     <string name="sj_see">See</string>
+    <string name="email">Email</string>
+    <string name="enter_email">Enter your email</string>
+    <string name="enter_password">Enter your password</string>
+    <string name="password">Password</string>
+    <string name="alert_title_connectionError">Connection Error</string>
+    <string name="alert_msg_connectionError">Please check your network connection and try again.</string>
+    <string name="action_ok">OK</string>
 
-
+    <string name="alert_title_Error">Error</string>
+    <string name="alert_msg_Error">You are not authorized to add these camera</string>
 
 </resources>

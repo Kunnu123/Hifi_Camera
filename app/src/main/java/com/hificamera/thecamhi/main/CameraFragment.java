@@ -13,6 +13,7 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 
+import android.app.ActivityManager;
 import android.app.AlertDialog;
 import android.app.Notification;
 
@@ -39,6 +40,7 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
+import android.support.v7.widget.AppCompatImageView;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
@@ -97,6 +99,7 @@ import com.hificamera.thecamhi.bean.HiDataValue;
 import com.hificamera.thecamhi.bean.MyCamera;
 
 
+import static android.content.Context.ACTIVITY_SERVICE;
 import static com.hificamera.thecamhi.utils.UidConfigUtil.blackUidMap;
 
 public class CameraFragment extends HiFragment implements ICameraIOSessionCallback, OnItemClickListener {
@@ -118,6 +121,7 @@ public class CameraFragment extends HiFragment implements ICameraIOSessionCallba
     private boolean delModel = false;
     int ranNum;
     private TitleView titleView;
+    private AppCompatImageView ivLogout;
 
     HiThreadConnect connectThread = null;
     private int saveopenswipeindex = -1;
@@ -247,6 +251,7 @@ public class CameraFragment extends HiFragment implements ICameraIOSessionCallba
 
     private void initView() {
         titleView = (TitleView) layoutView.findViewById(R.id.fg_ca_title);
+        ivLogout = (AppCompatImageView) layoutView.findViewById(R.id.ivLogout);
         titleView.setTitle(getString(R.string.title_camera_fragment));
         titleView.setButton(TitleView.NAVIGATION_TEXT_RIGHT);
         if (HiDataValue.shareIsOpen) {
@@ -282,6 +287,23 @@ public class CameraFragment extends HiFragment implements ICameraIOSessionCallba
 
             }
         });
+
+        ivLogout.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder dlgBuilder = new AlertDialog.Builder(getActivity());
+                dlgBuilder.setIcon(android.R.drawable.ic_lock_power_off);
+                dlgBuilder.setTitle("Logout");
+                dlgBuilder.setMessage("are you sure want to logout ?");
+                dlgBuilder.setPositiveButton(getText(R.string.btn_ok), new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        doLogOut();
+                    }
+                }).show();
+            }
+        });
+
         mListView = (SwipeMenuListView) layoutView.findViewById(R.id.lv_swipemenu);
         LinearLayout add_camera_ll = (LinearLayout) layoutView.findViewById(R.id.add_camera_ll);
         add_camera_ll.setOnClickListener(new OnClickListener() {
@@ -333,6 +355,27 @@ public class CameraFragment extends HiFragment implements ICameraIOSessionCallba
             }
 
         });
+    }
+
+    private void doLogOut() {
+        try {
+            Objects.requireNonNull(getActivity()).deleteDatabase(HiDataValue.DB_NAME);
+            SharePreUtils.removeKey("isfshow", getActivity(), "isLogin");
+            SharePreUtils.removeKey("isfshow", getActivity(), "pre_userid");
+            SharePreUtils.removeKey("isfshow", getActivity(), "pre_customer_id");
+            SharePreUtils.removeKey("isfshow", getActivity(), "pre_user_name");
+            SharePreUtils.removeKey("isfshow", getActivity(), "pre_address");
+            SharePreUtils.removeKey("isfshow", getActivity(), "pre_email");
+            SharePreUtils.removeKey("isfshow", getActivity(), "pre_phone_no");
+            SharePreUtils.removeKey("isfshow", getActivity(), "pre_camera_id");
+            SharePreUtils.removeKey("isfshow", getActivity(), "pre_is_camera_live");
+            SharePreUtils.removeKey("isfshow", getActivity(), "pre_create_date");
+//
+            Intent intent = new Intent(getActivity(), SplashActivity.class);
+            startActivity(intent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void sendUnRegister(MyCamera mCamera, int enable) {

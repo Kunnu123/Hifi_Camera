@@ -5,12 +5,11 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <uses-permission-sdk-23 android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -34,9 +33,7 @@
         android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
         tools:ignore="ProtectedPermissions" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-
-    <!-- Optional. Required for location feature -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Optional. Required for location feature -->
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -47,19 +44,25 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="com.meizu.flyme.push.permission.RECEIVE" />
+
     <permission
         android:name="${applicationId}.push.permission.MESSAGE"
         android:protectionLevel="signature" />
+
     <uses-permission android:name="${applicationId}.push.permission.MESSAGE" />
     <uses-permission android:name="com.meizu.c2dm.permission.RECEIVE" />
+
     <permission
         android:name="${applicationId}.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
+
     <uses-permission android:name="${applicationId}.permission.C2D_MESSAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <permission
         android:name="${applicationId}.permission.MIPUSH_RECEIVE"
         android:protectionLevel="signature" />
+
     <uses-permission android:name="${applicationId}.permission.MIPUSH_RECEIVE" />
     <uses-permission android:name="com.coloros.mcs.permission.RECIEVE_MCS_MESSAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -76,16 +79,27 @@
     <uses-permission android:name="com.hificamera.permission.PROCESS_PUSH_MSG" />
 
     <application
-        android:name="com.hificamera.thecamhi.base.CrashApplication"
+        android:name=".thecamhi.base.CrashApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
+        android:supportsRtl="false"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        android:supportsRtl="false"
-        tools:replace="android:supportsRtl"
-        tools:ignore="all">
+        tools:ignore="all"
+        tools:replace="android:supportsRtl">
+        <activity
+            android:name=".thecamhi.main.LoginAcitivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".thecamhi.main.RegisterAcitivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait" />
+
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
@@ -93,15 +107,14 @@
           <uses-library android:name="org.apache.http.legacy" android:required="false"/>
           android:networkSecurityConfig="@xml/xg_network_security_config"
         -->
-
         <activity
-            android:name="com.hificamera.thecamhi.main.SplashActivity"
+            android:name=".thecamhi.main.SplashActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:launchMode="singleTop"
-            android:windowSoftInputMode="stateHidden|stateAlwaysHidden"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme1">
+            android:theme="@style/AppTheme1"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -109,217 +122,216 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.hificamera.thecamhi.main.MainActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.hificamera.thecamhi.activity.AddCameraActivity"
+            android:name=".thecamhi.main.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.SearchCameraActivity"
+            android:name=".thecamhi.activity.AddCameraActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.thecamhi.zxing.CaptureActivity"
+            android:name=".thecamhi.activity.SearchCameraActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.WifiOneKeySettingActivity"
+            android:name=".thecamhi.zxing.CaptureActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.LiveViewActivity"
+            android:name=".thecamhi.activity.WifiOneKeySettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".thecamhi.activity.LiveViewActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.setting.AliveSettingActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name"
-            android:windowSoftInputMode="stateHidden|stateAlwaysHidden"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.hificamera.thecamhi.activity.EditCameraActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.hificamera.thecamhi.activity.setting.PasswordSettingActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.hificamera.thecamhi.activity.setting.AlarmSettingActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.hificamera.thecamhi.activity.setting.AlarmActionActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name"
-            android:windowSoftInputMode="stateHidden|stateAlwaysHidden"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.hificamera.thecamhi.activity.setting.TimeVideoActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.hificamera.thecamhi.activity.setting.AudioSettingActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.hificamera.thecamhi.activity.setting.VideoSettingActivity"
+            android:name=".thecamhi.activity.setting.AliveSettingActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.setting.WifiSettingActivity"
+            android:name=".thecamhi.activity.EditCameraActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".thecamhi.activity.setting.PasswordSettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".thecamhi.activity.setting.AlarmSettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".thecamhi.activity.setting.AlarmActionActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.setting.SDCardSettingActivity"
+            android:name=".thecamhi.activity.setting.TimeVideoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".thecamhi.activity.setting.AudioSettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".thecamhi.activity.setting.VideoSettingActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.setting.TimeSettingActivity"
+            android:name=".thecamhi.activity.setting.WifiSettingActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.setting.EmailSettingActivity"
+            android:name=".thecamhi.activity.setting.SDCardSettingActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.setting.FtpSettingActivity"
+            android:name=".thecamhi.activity.setting.TimeSettingActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.setting.SystemSettingActivity"
+            android:name=".thecamhi.activity.setting.EmailSettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity
+            android:name=".thecamhi.activity.setting.FtpSettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
+        <activity
+            android:name=".thecamhi.activity.setting.SystemSettingActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.setting.DeviceInfoActivity"
+            android:name=".thecamhi.activity.setting.DeviceInfoActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.LocalPictureActivity"
+            android:name=".thecamhi.activity.LocalPictureActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.VideoLocalActivity"
+            android:name=".thecamhi.activity.VideoLocalActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.VideoOnlineActivity"
+            android:name=".thecamhi.activity.VideoOnlineActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.PlaybackOnlineActivity"
+            android:name=".thecamhi.activity.PlaybackOnlineActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.SearchSDCardVideoActivity"
+            android:name=".thecamhi.activity.SearchSDCardVideoActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.hichip.activity.ConstomSearchActivity"
+            android:name=".hichip.activity.ConstomSearchActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.hichip.activity.WifiSetToDeviceActivity"
+            android:name=".hichip.activity.WifiSetToDeviceActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.hichip.activity.TimeZoneListActivity"
+            android:name=".hichip.activity.TimeZoneListActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.hichip.pictureviewer.ImagePagerActivity"
+            android:name=".hichip.pictureviewer.ImagePagerActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.hichip.activity.PlaybackLocalActivity"
+            android:name=".hichip.activity.PlaybackLocalActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.hificamera.hichip.activity.RF.RFActivity"
+            android:name=".hichip.activity.RF.RFActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.hichip.activity.RF.AddRFActivity"
+            android:name=".hichip.activity.RF.AddRFActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.hichip.activity.RF.RemoteControlActivity"
+            android:name=".hichip.activity.RF.RemoteControlActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.hichip.activity.RF.CheckRFCodeActivity"
+            android:name=".hichip.activity.RF.CheckRFCodeActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.hichip.activity.RF.SetUpAndAddRFActivity"
+            android:name=".hichip.activity.RF.SetUpAndAddRFActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.hichip.activity.RF.RFAlarmlog"
+            android:name=".hichip.activity.RF.RFAlarmlog"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.hichip.activity.RF.RemoteControlKeyActivity"
+            android:name=".hichip.activity.RF.RemoteControlKeyActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.hichip.activity.FishEye.FishEyeActivity"
+            android:name=".hichip.activity.FishEye.FishEyeActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.hichip.activity.Share.SeleShaCameraListActivity"
+            android:name=".hichip.activity.Share.SeleShaCameraListActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.hichip.activity.Share.ShareQRCodeActivity"
+            android:name=".hichip.activity.Share.ShareQRCodeActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
@@ -330,80 +342,81 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.hificamera.hichip.activity.FishEye.FishPlaybackOnlineActivity"
+            android:name=".hichip.activity.FishEye.FishPlaybackOnlineActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.hificamera.hichip.activity.FishEye.FishEyePlaybackLocalActivity"
+            android:name=".hichip.activity.FishEye.FishEyePlaybackLocalActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.hificamera.hichip.activity.FishEye.FishEyePhotoActivity"
+            android:name=".hichip.activity.FishEye.FishEyePhotoActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.hificamera.hichip.activity.WallMounted.WallMountedActivity"
+            android:name=".hichip.activity.WallMounted.WallMountedActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.hificamera.hichip.activity.WallMounted.WallMountedPhotoActivity"
+            android:name=".hichip.activity.WallMounted.WallMountedPhotoActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.hificamera.hichip.activity.WallMounted.WallMountedPlayLocalActivity"
+            android:name=".hichip.activity.WallMounted.WallMountedPlayLocalActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.hificamera.hichip.activity.WallMounted.WallMountedOnlineActivity"
+            android:name=".hichip.activity.WallMounted.WallMountedOnlineActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="landscape" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.setting.AlarmSettingExtActivity"
+            android:name=".thecamhi.activity.setting.AlarmSettingExtActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.hichip.activity.AlarmVoiceTypeActivity"
+            android:name=".hichip.activity.AlarmVoiceTypeActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.hichip.activity.AlarmSoundTimeActivity"
+            android:name=".hichip.activity.AlarmSoundTimeActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.ScanQRCodeActivity"
+            android:name=".thecamhi.activity.ScanQRCodeActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.thecamhi.main.WebViewActivity"
+            android:name=".thecamhi.main.WebViewActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.setting.AlarmHumanActivity"
+            android:name=".thecamhi.activity.setting.AlarmHumanActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.setting.AlarmHumanWayActivity"
+            android:name=".thecamhi.activity.setting.AlarmHumanWayActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.hificamera.thecamhi.activity.setting.FourGInfoActivity"
+            android:name=".thecamhi.activity.setting.FourGInfoActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="${applicationId}.fileprovider"
@@ -414,52 +427,45 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <receiver android:name="com.hificamera.thecamhi.push.MeiZuPushMsgReceiver">
+        <receiver android:name=".thecamhi.push.MeiZuPushMsgReceiver">
             <intent-filter>
-                <!-- 接收 push 消息 -->
+
                 <action android:name="com.meizu.flyme.push.intent.MESSAGE" />
-                <!-- 接收 register 消息 -->
                 <action android:name="com.meizu.flyme.push.intent.REGISTER.FEEDBACK" />
-                <!-- 接收 unregister 消息-->
                 <action android:name="com.meizu.flyme.push.intent.UNREGISTER.FEEDBACK" />
-                <!-- 兼容低版本 Flyme3 推送服务配置 -->
                 <action android:name="com.meizu.c2dm.intent.REGISTRATION" />
                 <action android:name="com.meizu.c2dm.intent.RECEIVE" />
 
                 <category android:name="${applicationId}" />
             </intent-filter>
         </receiver>
-        <!--  魅族推送配置end  -->
-        <!--  小米推送配置begin  -->
+
         <service
             android:name="com.xiaomi.push.service.XMPushService"
             android:enabled="true"
             android:process=":pushservice" />
-
         <service
             android:name="com.xiaomi.push.service.XMJobService"
             android:enabled="true"
             android:exported="false"
             android:permission="android.permission.BIND_JOB_SERVICE"
-            android:process=":pushservice" /> <!--注：此service必须在3.0.1版本以后（包括3.0.1版本）加入-->
-
+            android:process=":pushservice" /> <!-- 注：此service必须在3.0.1版本以后（包括3.0.1版本）加入 -->
         <service
             android:name="com.xiaomi.mipush.sdk.PushMessageHandler"
             android:enabled="true"
             android:exported="true" />
-
         <service
             android:name="com.xiaomi.mipush.sdk.MessageHandleService"
-            android:enabled="true" /> <!--注：此service必须在2.2.5版本以后（包括2.2.5版本）加入-->
+            android:enabled="true" /> <!-- 注：此service必须在2.2.5版本以后（包括2.2.5版本）加入 -->
         <receiver
             android:name="com.xiaomi.push.service.receivers.NetworkStatusReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
-
         <receiver
             android:name="com.xiaomi.push.service.receivers.PingReceiver"
             android:exported="false"
@@ -469,7 +475,7 @@
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.hificamera.thecamhi.push.MiPushReceiver"
+            android:name=".thecamhi.push.MiPushReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.xiaomi.mipush.RECEIVE_MESSAGE" />
@@ -483,12 +489,13 @@
         </receiver>
 
         <service
-            android:name="com.hificamera.thecamhi.push.HWPushService"
+            android:name=".thecamhi.push.HWPushService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.huawei.push.action.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
         <provider
             android:name="com.huawei.hms.update.provider.UpdateProvider"
             android:authorities="com.hificamera.hms.update.provider"
@@ -496,14 +503,15 @@
             android:grantUriPermissions="true" />
 
         <service
-            android:name="com.hificamera.thecamhi.push.MyFirebaseMessagingService"
+            android:name=".thecamhi.push.MyFirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
         <receiver
-            android:name="com.hificamera.thecamhi.base.PushMessageReceiver"
+            android:name=".thecamhi.base.PushMessageReceiver"
             android:exported="true">
             <intent-filter>
                 <action android:name="com.tencent.android.tpush.action.PUSH_MESSAGE" />
